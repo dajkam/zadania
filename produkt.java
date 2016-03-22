@@ -1,40 +1,38 @@
-package faktura;
+package javamakt;
 
 public class produkt { 
-	public produkt(String nazwa, double cenan, double vat, double cenab) {
-		super();
-		this.nazwa = nazwa;
-		this.cenan = cenan;
-		this.vat = vat;
-		this.cenab = cenab;
+	public String getKod() {
+		return kod;
 	}
+	public void setKod(String kod) {
+		this.kod = kod;
+	}
+	public produkt(double cena, String opis, String kod) {
+		super();
+		this.cena = cena;
+		this.opis = opis;
+		this.kod = kod;
+	}
+	
 	@Override
 	public String toString() {
-		return "produkt [nazwa=" + nazwa + ", cenan=" + cenan + ", vat=" + vat
-				+ ", cenab=" + cenab + "]";
+		return "produkt [cena=" + cena + ", opis=" + opis + ", kod=" + kod
+				+ "]";
 	}
-	public String getNazwa() {
-		return nazwa;
+	public double getCena() {
+		return cena;
 	}
-	public void setNazwa(String nazwa) {
-		this.nazwa = nazwa;
+	public void setCena(double cena) {
+		this.cena = cena;
 	}
-	public double getCenan() {
-		return cenan;
+	public String getOpis() {
+		return opis;
 	}
-	public void setCenan(double cenan) {
-		this.cenan = cenan;
+	public void setOpis(String opis) {
+		this.opis = opis;
 	}
-	public double getCenab() {
-		return cenab;
-	}
-	public void setCenab(double cenab) {
-		this.cenab = cenab;
-	}
-	String nazwa; 
-	double cenan; 
-	double vat; 
-	double cenab=cenan*vat; 
-	
+	double cena; 
+	String opis; 
+	String kod;
 
 }
